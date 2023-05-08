@@ -16,11 +16,12 @@ function firstRecurringCharacter2(input) {
   let map = {};
   for (let i = 0; i < input.length; i++) {
     console.log(map[2]);
-    if (map[input[i]]) {
+    if (map[input[i]] !== undefined) {
       return input[i];
     } else {
       map[input[i]] = i;
     }
+    console.log(map);
   }
 
   return undefined;
