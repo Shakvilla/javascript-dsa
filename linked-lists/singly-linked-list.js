@@ -93,7 +93,7 @@ class LinkedList {
 
     this.head.next = null;
     this.head = first;
-    return this.printList();
+    return this;
   }
 }
 
