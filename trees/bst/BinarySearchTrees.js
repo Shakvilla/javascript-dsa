@@ -69,3 +69,10 @@ tree.insert(9);
 tree.insert(20);
 tree.lookup(9);
 // JSON.stringify();
+
+function traverse(node) {
+  const tree = { value: node.value };
+  tree.left = node.left === null ? null : traverse(node.left);
+  tree.right = node.right === null ? null : traverse(node.right);
+  return tree;
+}
