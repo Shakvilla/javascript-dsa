@@ -12,7 +12,7 @@ class BinarySearchTree {
   }
 
   /**
-   * 1. create a new node and assign it to newNode
+   * 1. create a new node and assign it to newNode variable
    * 2. check if tree is empty, assign newNode as root
    * 3. if tree is not empty, assign current node as root
    * 4. run a while loop, when value is less than currentNode insert it at the left of the parent node
@@ -44,7 +44,24 @@ class BinarySearchTree {
       }
     }
   }
-  lookup(value) {}
+
+  lookup(value) {
+    if (!this.root) {
+      return false;
+    }
+    let currentNode = this.root;
+    while (currentNode) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else if (currentNode.value === value) {
+        return currentNode;
+      }
+
+      return false;
+    }
+  }
 }
 
 const tree = new BinarySearchTree();
