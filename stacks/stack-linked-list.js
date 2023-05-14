@@ -5,6 +5,7 @@ class Node {
   }
 }
 
+// Stack using linked list
 class Stack {
   constructor() {
     this.top = null;
@@ -54,3 +55,6 @@ myStack.push("discord");
 myStack.peek();
 myStack.pop();
 myStack.pop();
+
+
+
