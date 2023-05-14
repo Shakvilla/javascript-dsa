@@ -65,3 +65,7 @@ class BinarySearchTree {
 }
 
 const tree = new BinarySearchTree();
+tree.insert(9);
+tree.insert(20);
+tree.lookup(9);
+// JSON.stringify();
